@@ -15,6 +15,10 @@ const productSchema = new mongoose.Schema({
     lowercase: true,
     enum: ["vegetable", "dairy", "fruit"],
   },
+  deleted: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const Product = mongoose.model("Product", productSchema);

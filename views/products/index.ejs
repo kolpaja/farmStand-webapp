@@ -7,11 +7,13 @@
     <title>All Products</title>
   </head>
   <body>
-    <h1>Here are all products:</h1>
-    <ul>
+    <h1><%= category %> Products:</h1>
+    <ol>
       <% for( let product of products ) { %>
       <li><a href="/products/<%= product._id %> "><%= product.name %></a></li>
       <% } %>
-    </ul>
+    </ol>
+    <a href="/products/new">Add a new product!</a>
+    <a href="/trash">Deleted Products</a>
   </body>
 </html>

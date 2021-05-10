@@ -11,3 +11,7 @@
 5. we get the page loaded with product by accessing to app.get("/products) and then making it a async function
    to await there const products = await Product.find({});
 6. setting up the pages to display by taking data from the DB
+
+   <% for( let product of deletedProduct ) { %>
+     <li><a href="/products/<%= product._id %> "><%= product.name %></a></li>
+     <% } %>
