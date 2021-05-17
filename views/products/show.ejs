@@ -16,11 +16,15 @@
           ><%= product.category %></a
         >
       </li>
+      <li>
+        Farm:
+        <a href="/farms/<%=product.farm._id %>"><%= product.farm.name %></a>
+      </li>
     </ul>
     <a href="/products">All Products</a>
     <a href="/products/<%= product._id %>/Edit ">Edit Products</a>
-    <form action="/products/<%= product._id %>?_method=PATCH" method="post">
-      <button>Move to Trash</button>
+    <form action="/products/<%= product._id %>?_method=DELETE" method="post">
+      <button>Delete</button>
     </form>
   </body>
 </html>
